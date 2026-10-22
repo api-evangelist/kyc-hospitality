@@ -1,0 +1,29 @@
+# KYCH Public API
+
+## Docs
+
+- [Introduction](https://api-docs.kychospitality.com/index.md)
+- [Overview](https://api-docs.kychospitality.com/overview.md)
+- [Getting Started](https://api-docs.kychospitality.com/getting-started.md)
+- [Authentication](https://api-docs.kychospitality.com/authentication.md)
+- [Security](https://api-docs.kychospitality.com/security.md)
+- [Definitions](https://api-docs.kychospitality.com/definitions.md)
+- [Key Data](https://api-docs.kychospitality.com/key-data.md)
+- [Personal Information (PII)](https://api-docs.kychospitality.com/pii.md)
+- [Hotel Data Challenges](https://api-docs.kychospitality.com/data-challenges.md)
+- [Using the API](https://api-docs.kychospitality.com/use-details.md)
+- [API Requests](https://api-docs.kychospitality.com/api-requests.md)
+- [API Responses](https://api-docs.kychospitality.com/api-responses.md)
+- [Error Codes](https://api-docs.kychospitality.com/error-codes.md)
+- [Get API info](https://api-docs.kychospitality.com/api-reference/system/get-api-info.md): Returns the API version and basic context, and confirms your key works. Authenticated — use this as a quick "am I hitting the right endpoint with a valid key" check.
+- [Health check](https://api-docs.kychospitality.com/api-reference/system/health-check.md): Liveness check for monitors and load balancers. **Unauthenticated and minimal by design** — no API key should ever sit in a monitoring tool. Returns only a status; no versions or internals.
+- [List properties](https://api-docs.kychospitality.com/api-reference/properties/list-properties.md): Lists the active properties within the brand that your API key can access. **Brand-wide discovery — no `Kyc-Property-Id` header** (this is how you discover property IDs). Results are scoped by your key's authorized properties.
+- [Get a property](https://api-docs.kychospitality.com/api-reference/properties/get-a-property.md): Returns a single property by ID. The path parameter is the property, so **no `Kyc-Property-Id` header** is needed. 404 if the ID does not exist or your key cannot access it.
+
+## OpenAPI Specs
+
+- [kych-public-v1.0](https://api-docs.kychospitality.com/openapi/kych-public-v1.0.yaml)
+- [v1](https://api-docs.kychospitality.com/openapi/v1.yaml)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

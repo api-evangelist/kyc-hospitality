@@ -1,25 +1,83 @@
 aid: kyc-hospitality
+
 name: KYC Hospitality
-description: 'KYC Hospitality is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by bonfire-ventures) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'KYC Hospitality provides a platform that connects hospitality businesses with compliance and identity verification services. The company aims to streamline guest onboarding, ensure regulatory adherence, and enhance security for hotels, resorts, and short‑term rentals. By integrating KYC processes directly into property management systems, it helps operators reduce fraud, meet local laws, and improve the guest experience through faster check‑in and automated document verification. Founded with backing from Bonfire Ventures, KYC Hospitality focuses on the hospitality sector to deliver tailored compliance solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/kyc-hospitality/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Hospitality
+- Compliance
+- IdentityVerification
+- SaaS
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://cdn.prod.website-files.com/64065f22a05691517febcaf1/640665da869a5d9939c2ad73_KYC%20Logo.webp
+
+common:
+- type: Authentication
+  url: authentication/kyc-hospitality-authentication.yml
+- type: LLMsTxt
+  url: llms/kyc-hospitality-llms.txt
+- type: AgentCard
+  url: a2a/kyc-hospitality-a2a.yml
+- type: WellKnown
+  url: well-known/kyc-hospitality-well-known.yml
+- type: Hosts
+  url: hosts/kyc-hospitality-hosts.yml
+- type: Vendors
+  url: vendors/kyc-hospitality-vendors.yml
+- type: Security
+  url: https://api-docs.kychospitality.com/security
+- type: PrivacyPolicy
+  url: https://www.kychospitality.com/privacy
+- type: GettingStarted
+  url: https://api-docs.kychospitality.com/getting-started
+- type: Documentation
+  url: https://api-docs.kychospitality.com/
+- type: APIReference
+  url: https://api-docs.kychospitality.com/llms.txt
+- type: DomainSecurity
+  url: security/kyc-hospitality-domain-security.yml
+- type: Website
+  url: https://www.kychospitality.com
+
+apis: []
+
 x-backed-by:
 - bonfire-ventures
-common:
-- type: Website
-  url: https://kychospitality.com
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's website is a static Webflow page with no machine‑readable API documentation.
+  evidence:
+    - url: https://www.kychospitality.com
+      status: 200
+  checked: '2026-10-22'
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 17
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

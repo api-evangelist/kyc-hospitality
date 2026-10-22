@@ -1,0 +1,20 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://api-docs.kychospitality.com/authentication.md
+sources:
+- https://api-docs.kychospitality.com/authentication.md
+- https://api-docs.kychospitality.com/getting-started.md
+description: Authentication is done system-to-system via an API key, which is scoped to a specific property at a brand, so you must be sure you
+  are sending the right key to act on data for an individual property.
+schemes:
+- type: apiKey
+  name: API Key
+  evidence: 'API keys are opaque ASCII strings that you must send as a standard bearer header, as in:
+
+
+    `Authorization: Bearer <key>`'
+  location: header
+  header: Authorization
+  how_to_obtain: API keys are issued by the KYC support team and will be sent to you via secure one-time-use channels.
+docs: https://api-docs.kychospitality.com/authentication.md
